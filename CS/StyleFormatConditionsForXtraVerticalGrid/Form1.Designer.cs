@@ -1,0 +1,95 @@
+﻿// Developer Express Code Central Example:
+// How to implement StyleFormatConditions in VGridControl
+// 
+// This example demonstrates how to implement StyleFormatConditions in
+// VGridControl. The difficulty is in the fact that VGridControl doesn't implement
+// the FormatConditions property at all, if compared to how this behavior is
+// supported in GridControl. So, we created a custom class inherited from
+// VGridControl and added the FormatConditions property to it. In this example we
+// override the RecordCellStyle event to set a new style for VGridControl’s cells,
+// which satisfy predefined conditions.
+// 
+// You can find sample updates and versions for different programming languages here:
+// http://www.devexpress.com/example=E4106
+
+namespace StyleFormatConditionsForXtraVerticalGrid {
+    partial class Form1 {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent() {
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.customVGridControl1 = new StyleFormatConditionsForXtraVerticalGrid.CustomVGridControl();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customVGridControl1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridControl1.Location = new System.Drawing.Point(0, 214);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(581, 239);
+            this.gridControl1.TabIndex = 4;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // customVGridControl1
+            // 
+            this.customVGridControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.customVGridControl1.Location = new System.Drawing.Point(0, 0);
+            this.customVGridControl1.Name = "customVGridControl1";
+            this.customVGridControl1.Size = new System.Drawing.Size(581, 200);
+            this.customVGridControl1.TabIndex = 5;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(581, 453);
+            this.Controls.Add(this.customVGridControl1);
+            this.Controls.Add(this.gridControl1);
+            this.Name = "Form1";
+            this.Text = "implement StyleFormatConditions in VGridControl";
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customVGridControl1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private CustomVGridControl customVGridControl1;
+    }
+}
+
