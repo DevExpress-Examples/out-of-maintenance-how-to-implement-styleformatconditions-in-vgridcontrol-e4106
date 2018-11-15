@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [CustomVGridControl.cs](./CS/StyleFormatConditionsForXtraVerticalGrid/CustomVGridControl.cs) (VB: [CustomVGridControl.vb](./VB/StyleFormatConditionsForXtraVerticalGrid/CustomVGridControl.vb))
+* [Form1.cs](./CS/StyleFormatConditionsForXtraVerticalGrid/Form1.cs) (VB: [Form1.vb](./VB/StyleFormatConditionsForXtraVerticalGrid/Form1.vb))
+* [MyStyleFormatCondition.cs](./CS/StyleFormatConditionsForXtraVerticalGrid/MyStyleFormatCondition.cs) (VB: [MyStyleFormatCondition.vb](./VB/StyleFormatConditionsForXtraVerticalGrid/MyStyleFormatCondition.vb))
+<!-- default file list end -->
 # How to implement StyleFormatConditions in VGridControl
 
 
